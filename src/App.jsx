@@ -55,7 +55,7 @@ function App() {
       <button className={`nav-item ${!active ? "nav-active" : ""}`} onClick={newChat}><Activity size={17}/> Overview</button>
       <div className="side-label agent-label">YOUR AGENTS <span>{agents.length}</span></div>
       <nav className="agent-nav">{agents.map((agent) => { const Icon = iconMap[agent.icon] || Bot; return <button key={agent.id} className={`nav-item ${active===agent.id ? "nav-active" : ""}`} onClick={()=>openAgent(agent.id)}><span className={`mini-icon ${agent.color}`}><Icon size={15}/></span>{agent.name}</button>; })}</nav>
-      <div className="sidebar-bottom"><div className="upgrade-card"><div className="upgrade-icon"><Zap size={16}/></div><b>Make room for ideas.</b><p>Your AI workspace, ready when you are.</p><span className="plan-label">GEMINI POWERED</span></div><div className="profile"><div className="avatar">H</div><div><b>Hub Workspace</b><small>Personal workspace</small></div><Settings2 size={17} className="profile-settings"/></div></div>
+      {/* <div className="sidebar-bottom"><div className="upgrade-card"><div className="upgrade-icon"><Zap size={16}/></div><b>Make room for ideas.</b><p>Your AI workspace, ready when you are.</p><span className="plan-label">GEMINI POWERED</span></div><div className="profile"><div className="avatar">H</div><div><b>Hub Workspace</b><small>Personal workspace</small></div><Settings2 size={17} className="profile-settings"/></div></div> */}
     </aside>
     {mobileNav && <div className="scrim" onClick={()=>setMobileNav(false)} />}
     <main className="main-area">
